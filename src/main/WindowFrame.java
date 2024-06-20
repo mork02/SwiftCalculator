@@ -1,27 +1,27 @@
 package main;
-
 import javax.swing.*;
 import java.awt.*;
 
+////////// JFrame Window //////////
 public class WindowFrame extends JFrame {
 
-    protected JFrame frame;
     protected JPanel panel;
 
     public WindowFrame() {
+        // Loads panel //
         panel = new WindowPanel();
-        InitFrame();
+        InitFrame();    // Initialize the frame components
     }
 
     private void InitFrame() {
-        frame = new JFrame("Taschenrechner");
-        frame.setSize(380, 380);
-        frame.setMinimumSize(new Dimension(330, 330));
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
-        frame.setLayout(new BorderLayout());
-        frame.add(panel);
-        frame.setVisible(true);
+        JFrame frame = new JFrame("Taschenrechner");    // Frame with title
+        frame.setSize(380, 380);    // size
+        frame.setMinimumSize(new Dimension(330, 330)); // min. size
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   // closes Console when window is closed
+        frame.setLocationRelativeTo(null);  // position from window in middle of the screen
+        frame.setLayout(new BorderLayout());    // sets layout to Boarder layout
+        frame.add(panel);   // adds panel to frame
+        frame.setVisible(true); // sets panel visible
     }
 
 }
